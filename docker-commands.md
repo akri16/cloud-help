@@ -4,11 +4,11 @@
 Run a container from an image <br>
 `docker run [-it | -d] [--rm] <img>:<tag> [<CMD>]`
 
-Check the running containers
-docker ps [-a]
+Check the running containers<br>
+`docker ps [-a]`
 
 Lifecycle commands <br>
 `docker stop/kill/restart/rm`
 
-Inspect a container
+Inspect a container<br>
 `docker inspect [--format={{<FORMAT>}}] <container-id>`
