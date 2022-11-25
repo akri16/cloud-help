@@ -1,3 +1,7 @@
+- <i>cgroups</i> in containers are used to limit the system resources a container can use
+- Containers use names paces, cgroups and overlay file systems
+  - Docker: Engine that provides a UI to interact with containerd
+  - containerd: The Container runtime that works with the kernel to manage the container lifecycle. It is a daemon process
 - If the shell you are running is an entry point shell then you have to detach from the shell before moving away to prevent stopping the container
 - Use Ctrl + P, Ctrl + Q to detach from a running container entrypoint terminal
 
@@ -12,6 +16,9 @@ Lifecycle commands <br>
 
 Inspect a container<br>
 `docker inspect [--format={{<FORMAT>}}] <container-id>`
+
+Get a shell/ execute a command in a container<br>
+`docker exec --it <image-name> <command [to open a shell]>`
 
 ### Logging
 - Docker doesn't connect to STDOUT, so you won't see the logs if you run a detached container<br>
@@ -61,6 +68,13 @@ Tag an image <br>
 
 Build an image from the working directory <br>
 `docker build -t [--no-cache] <tag>`
+
+### Image creation from a running container after edit
+
+`docker commit <container-id/name> <imgrepo:tag>`
+  
+ Save an image to a tar file<br>
+ `docker save -o <fname>.tar <img-name>`
   
   
 
