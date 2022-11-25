@@ -12,3 +12,31 @@ Lifecycle commands <br>
 
 Inspect a container<br>
 `docker inspect [--format={{<FORMAT>}}] <container-id>`
+
+### Logging
+- Docker doesn't connect to STDOUT, so you won't see the logs if you run a detached container
+`docker logs <container-id>`
+
+- You need to investigate only when the Exit condition is (1). (0) is normal exit
+
+### Container Images
+- Basically a tar file with associated metadata
+- Build images on top of a base image layer
+- Each modification adds a layer. Try to reduce the number of layers as much as possible
+
+Show or remove Images
+`docker image ls|rm <img id>`
+
+Show differnet layers in the image
+`docker history <image:tag>`
+
+Tag an image
+`docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
+
+- You can create an image using:
+  1) `docker commit` on a running container after applying the modifications
+  2) Using a <i> Dockerfile </i>
+
+
+
+
