@@ -12,7 +12,7 @@ Get pods <br>
 
 ### YAML files
 
-To get help about probertie <br>
+To get help about properties <br>
 `kubectl explain`
 
 1. apiVersion
@@ -28,5 +28,5 @@ Container Specs
 5. env
 
 Create pod with yaml files<br>
-`kubectl create -f <FILE.yaml>` // This throws an error if already exists
+`kubectl create -f <FILE.yaml>` // This throws an error if already exists <br>
 `kubectl apply -f <FILE.yaml>` // This updates if already exists
