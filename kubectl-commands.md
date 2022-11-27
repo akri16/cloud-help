@@ -8,7 +8,7 @@ Create a simple pod running an image <br>
 `kubectl run <NAME> --image=<IMAGE>`
 
 Get pods <br>
-`kubectl get pods [-o yaml]`
+`kubectl get pods [-o yaml] [-o wide]`
 
 Inspect Pods <br>
 `kubectl describe pod <POD_NAME>`
@@ -51,6 +51,11 @@ Create|delete|replace pod with yaml files<br>
 Delete|Replace pod with yaml<br>
 `kubectl delete|replace -f <FILE.yaml>`
 
+Port Forward to access a Pod from your host computer <br>
+`kubectl port-forward <POD NAME> 8080:80 &`
+- Usually runs in forground. Adding `&` makes it run in background
+- Use `fg` to bring it to foreground again
+
 ### Generate YAML Files
 - These fit into the DevOps practices as you can commit the YAML files to your git repos
 - DO NOT write YAML files. Always generate them. As you can make mistakes while writing <br>
@@ -76,6 +81,5 @@ Delete|Replace pod with yaml<br>
 Create/See a namespace <br>
 `kubectl create namespace <NAMESPACE NAME>` <br>
 `kubectl describe ns <NAMESPACE NAME>`
-
 
 
