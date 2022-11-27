@@ -13,10 +13,24 @@ Get pods <br>
 Inspect Pods <br>
 `kubectl describe pod <POD_NAME>`
 
+Open a shell in a pod <br>
+`kubectl exec -it <POD NAME> -- [sh|/bin/bash]`
+- To see running processes you can cd into /proc or use `ps` command if available
+- Use `exit` to exit 
+
+See Logs | Troubleshooting
+- The entry point app doesn't connect to STDOUT
+- Logs sent to kubernetes cluster
+`kubect logs`
+`kubectl describe`
+- Check exit status
+- CrashLoopBackoff: The app is crashing and kubernetes is representing a restart loop that is happening in a Pod.
+
 ### YAML files
 
 To get help about properties <br>
-`kubectl explain`
+`kubectl explain` <br>
+Eg: `kubectl explain pods.spec`
 
 1. apiVersion
 2. Kind: Kind of object (Pods, Deployment)
@@ -52,3 +66,16 @@ Delete|Replace pod with yaml<br>
 3. Adapter Container: Container that matches/transforms the data pattern to other apllications in the cluster
 4. Init Contianer: This is a container that runs or fetches something before the main container gets executed.
             - The main container won't run until the init containers are done executing
+
+
+### Namespaces
+- RBAC
+- Security
+- Resource Quotas
+
+Create/See a namespace <br>
+`kubectl create namespace <NAMESPACE NAME>` <br>
+`kubectl describe ns <NAMESPACE NAME>`
+
+
+
