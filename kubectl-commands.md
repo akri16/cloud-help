@@ -82,4 +82,21 @@ Create/See a namespace <br>
 `kubectl create namespace <NAMESPACE NAME>` <br>
 `kubectl describe ns <NAMESPACE NAME>`
 
+### SecurityContext
+- Lets you configure important security related parameters like 
+            1. Run as root
+            2. Run as user xxxx
+            3. Disable privilege escalation (sudo)
+- Available under pods.spec.SecurityContext and pods.spec.containers.SecurityContext
 
+## Jobs
+
+- Pods are meant to be kept around forever
+- If you want them to be deleted after completion use Jobs instead
+- Use spec.ttlaftercompletion to cleanup the jobs after finished
+
+3 Types of Jobs <br>
+1. Non-Parallel;  completion=1, parallelism=1
+2. Parallel Jobs with fixed completion count; completion=n, parallelism=m
+3. Parallel jobs with a work queue; completion=1, parallelism=m: Completed when one of the pods is completed
+4. 
