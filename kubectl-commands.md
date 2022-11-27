@@ -27,6 +27,14 @@ Container Specs
 4. args
 5. env
 
-Create pod with yaml files<br>
+Create|delete|replace pod with yaml files<br>
 `kubectl create -f <FILE.yaml>` // This throws an error if already exists <br>
 `kubectl apply -f <FILE.yaml>` // This updates if already exists
+
+Delete|Replace pod with yaml<br>
+`kubectl delete|replace -f <FILE.yaml>`
+
+### Generate YAML Files
+- These fit into the DevOps practices as you can commit the YAML files to your git repos
+- DO NOT write YAML files. Always generate them. As you can make mistakes while writing
+`kubectl run buybox --image=busybox --dry-run=client -o yaml -- sleep 3600 > myfile.yaml` 
