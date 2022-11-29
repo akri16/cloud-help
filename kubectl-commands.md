@@ -101,13 +101,13 @@ Create/See a namespace <br>
 3. Parallel jobs with a work queue; completion=1, parallelism=m: Completed when one of the pods is completed
 
 Run a Job <br>
-kubectl create job <JOB_NAME> --image=<IMG_NAME> -- <CMDs>
+`kubectl create job <JOB_NAME> --image=<IMG_NAME> -- <CMDs>`
 
 Delete a Job <br>
-kubectl delete job <JOB_NAME>
+`kubectl delete job <JOB_NAME>`
             
 Get Jobs
-kubectl get jobs
+`kubectl get jobs`
 
 - job.spec.ttlSecondsAfterFinished: This specifies after how long after completion the job should be deleted. The default is forever.
 
