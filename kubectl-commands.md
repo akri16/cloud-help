@@ -99,4 +99,15 @@ Create/See a namespace <br>
 1. Non-Parallel;  completion=1, parallelism=1
 2. Parallel Jobs with fixed completion count; completion=n, parallelism=m
 3. Parallel jobs with a work queue; completion=1, parallelism=m: Completed when one of the pods is completed
-4. 
+
+Run a Job <br>
+kubectl create job <JOB_NAME> --image=<IMG_NAME> -- <CMDs>
+
+Delete a Job <br>
+kubectl delete job <JOB_NAME>
+            
+Get Jobs
+kubectl get jobs
+
+- job.spec.ttlSecondsAfterFinished: This specifies after how long after completion the job should be deleted. The default is forever.
+
