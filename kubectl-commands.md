@@ -111,3 +111,13 @@ Get Jobs
 
 - job.spec.ttlSecondsAfterFinished: This specifies after how long after completion the job should be deleted. The default is forever.
 
+
+## Cron Jobs
+
+Create Cron Job<br>
+`kubectl create cronjob <JOB_NAME> --image=<IMAGE> --schedule="*/ * * * *"`
+<br>.<br>
+![image](https://user-images.githubusercontent.com/54491362/204773811-4ada8b08-fd29-4902-8eda-ee3944bd74ca.png)
+![image](https://user-images.githubusercontent.com/54491362/204774499-7e8fd2db-3ca7-4701-9494-6a658c18dedf.png)
+
+
