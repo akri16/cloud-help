@@ -113,11 +113,28 @@ Get Jobs
 
 
 ## Cron Jobs
+- jobs run on a schedule
 
 Create Cron Job<br>
 `kubectl create cronjob <JOB_NAME> --image=<IMAGE> --schedule="*/ * * * *"`
 <br>.<br>
 ![image](https://user-images.githubusercontent.com/54491362/204773811-4ada8b08-fd29-4902-8eda-ee3944bd74ca.png)
 ![image](https://user-images.githubusercontent.com/54491362/204774499-7e8fd2db-3ca7-4701-9494-6a658c18dedf.png)
+
+Delete Cron Jobs with the associated Jobs and Pods <br>
+`kubectl delete cronjob <CRON_JOB_NAME>`
+
+
+## Resource Limitations
+
+- Putting resource limitations on containers: CPU(mcpus), Memory(MBs)
+    - Request: The resources that have to be alloted at startup to the container
+    - Limit: The maximum amount of resources the container can use.
+
+- Can also apply quotas on namespaces
+- Set it in <i> pods.spec.containers.resources </i>
+- If the request is too high to satisfy, the deployment will be kept on <i> Pending </i> state until the resources are avb
+- if the request is too low for the app and the oom killer will kick in and the tatus will be: OOMKILLED (Out of memory Killed)
+
 
 
