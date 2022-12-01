@@ -30,7 +30,7 @@ Get all the resources of a particular label<br>
 - The replica set is replaced with a new one. 
 - There is version history that holds the past n(=10 by default) replicasets so that you can rollback 
 1. Rolling Updates: No downtime
-2. Replace: Has downtime
+2. Recreate: Has downtime
 
 Set an update
 `kubectl set image deploy <DEP_NAME> <OLD_IMAGE>=<NEW_IMAGE>`
