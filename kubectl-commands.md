@@ -144,4 +144,5 @@ Delete all resources from all names<br>
 `kubectl delete all --all`
 
 Delete all without waiting for the resources to be deleted
-`kubectl delete all --all --force --grace-period=-1`
+`kubectl delete all --all --force --grace-period=-1 [-A]`
+
