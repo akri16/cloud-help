@@ -89,7 +89,7 @@ Create/See a namespace <br>
             3. Disable privilege escalation (sudo)
 - Available under pods.spec.SecurityContext and pods.spec.containers.SecurityContext
 
-## Jobs
+### Jobs
 
 - Pods are meant to be kept around forever
 - If you want them to be deleted after completion use Jobs instead
@@ -112,7 +112,7 @@ Get Jobs
 - job.spec.ttlSecondsAfterFinished: This specifies after how long after completion the job should be deleted. The default is forever.
 
 
-## Cron Jobs
+### Cron Jobs
 - jobs run on a schedule
 
 Create Cron Job<br>
@@ -125,7 +125,7 @@ Delete Cron Jobs with the associated Jobs and Pods <br>
 `kubectl delete cronjob <CRON_JOB_NAME>`
 
 
-## Resource Limitations
+### Resource Limitations
 
 - Putting resource limitations on containers: CPU(mcpus), Memory(MBs)
     - Request: The resources that have to be alloted at startup to the container
@@ -136,7 +136,7 @@ Delete Cron Jobs with the associated Jobs and Pods <br>
 - If the request is too high to satisfy, the deployment will be kept on <i> Pending </i> state until the resources are avb
 - if the request is too low for the app and the oom killer will kick in and the tatus will be: OOMKILLED (Out of memory Killed)
 
-## Cleaning up Resources
+### Cleaning up Resources
 
 - Periodic cleanup using cronjobs might help
 
