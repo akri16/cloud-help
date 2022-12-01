@@ -136,5 +136,12 @@ Delete Cron Jobs with the associated Jobs and Pods <br>
 - If the request is too high to satisfy, the deployment will be kept on <i> Pending </i> state until the resources are avb
 - if the request is too low for the app and the oom killer will kick in and the tatus will be: OOMKILLED (Out of memory Killed)
 
+## Cleaning up Resources
 
+- Periodic cleanup using cronjobs might help
 
+Delete all resources from all names<br>
+`kubectl delete all --all`
+
+Delete all without waiting for the resources to be deleted
+`kubectl delete all --all --force --grace-period=-1`
