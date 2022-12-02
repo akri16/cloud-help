@@ -36,4 +36,11 @@ Show a service account <br>
 `kubectl get sa default -o yaml`
 
 - Custom service accounts can be created
+- You have to create role, service account, bind them together with a rolebinding 
+- Once bound the secret for the service account are made avb in the pods at `/run/secrets/kubernetes.io/serviceaccount/token`
 
+Set a service account to a deploy <br>
+`kubectl set sa deploy <depname> <saname>`
+
+Create a service account <br>
+`kubectl create sa <saname>`
