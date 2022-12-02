@@ -9,3 +9,7 @@
   4. Artifact: Immutable file generated after the build
 
 - Sparse checkout: Pull only the code you need
+
+![image](https://user-images.githubusercontent.com/54491362/205369708-ee1caed5-4dd1-4d93-bad2-0226a564b91b.png)
+
+![image](https://user-images.githubusercontent.com/54491362/205369596-cf1b662a-41b3-4ac8-9ee8-3398a0ecda38.png)
