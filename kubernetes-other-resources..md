@@ -57,4 +57,18 @@ Get Deployment with labels <br>
 Remove a label <br>
 `kubectl label <RES_TYPE> <RES_NAME> <KEY>-`
 
+## Deployment History
+- MaxSurge: Max num of pods during an update to satisfy the minimum requirements
+- MaxUnavailable: Max num of pods taken down at a time during an update
+- These can be percentages or hard nos
 
+See the history <br>
+`kubectl rollout history deploy [<depname>] [--revision=<revision-no>]`
+
+Describe a rollout <br>
+`kubectl describe deployments.apps <depname>`
+
+Rollback a deployment
+`kubectl rollout undo deployment <depname> --to-revision=<revision_history>`
+
+- Change to the replicas won't get added to the history
