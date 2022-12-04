@@ -25,3 +25,10 @@
 ## Notifications
 
 - You can use Slack/Teams to alert developers about build notifications
+1. CI/CD
+2. ETL Pipelines
+3. Event Driven Workflows
+4. Build promotions
+5. Conditional processing
+
+- Pipeline plugin
