@@ -48,3 +48,7 @@ Types of pipelines:
 
 - GUI tool for creating pipelines
 - Native integration with PRs, GitHub
+- Multibranch pipeline
+
+
+
