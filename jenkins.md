@@ -32,3 +32,6 @@
 5. Conditional processing
 
 - Pipeline plugin
+- jenkins file
+- DSL with Groovy
+- Stage views
