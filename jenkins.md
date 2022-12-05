@@ -25,6 +25,9 @@
 ## Notifications
 
 - You can use Slack/Teams to alert developers about build notifications
+
+## Pipelines
+
 1. CI/CD
 2. ETL Pipelines
 3. Event Driven Workflows
@@ -40,3 +43,8 @@
 Types of pipelines:
 1. Scripted Pipeline: For complex requirements
 2. Declarative Pipeline: For regular requirements
+
+## Blueocean
+
+- GUI tool for creating pipelines
+- Native integration with PRs, GitHub
