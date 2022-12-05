@@ -34,4 +34,9 @@
 - Pipeline plugin
 - jenkins file
 - DSL with Groovy
+- Can use declarative or scripted syntax
 - Stage views
+
+Types of pipelines:
+1. Scripted Pipeline: For complex requirements
+2. Declarative Pipeline: For regular requirements
