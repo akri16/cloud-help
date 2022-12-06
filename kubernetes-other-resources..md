@@ -82,5 +82,6 @@ Show the Daemons ets <br>
 
 ## Horizontal Pod Autoscaler
 - Uses the Metrics Server
+- Autoscales according to trafic
 
 `kubectl -n workloaddb autoscale deployment <DEP_NAME> --cpu-percent=50  --min=1 --max=10`
