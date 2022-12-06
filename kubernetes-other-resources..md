@@ -72,3 +72,15 @@ Rollback a deployment
 `kubectl rollout undo deployment <depname> --to-revision=<revision_history>`
 
 - Change to the replicas won't get added to the history
+
+
+## DaemonSets
+- Runs a pod with the app on every node on the cluster
+
+Show the Daemons ets <br>
+`kubectl get ds`
+
+## Horizontal Pod Autoscaler
+- Uses the Metrics Server
+
+`kubectl -n workloaddb autoscale deployment <DEP_NAME> --cpu-percent=50  --min=1 --max=10`
