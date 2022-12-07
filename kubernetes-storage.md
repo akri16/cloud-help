@@ -16,6 +16,10 @@
     2. ReadWriteOnce: Only by one pod
     3. ReadWriteMany: by multiple pods
 
+- When using non `standard` storage class type, the class name is used as a label. The PVC with a label X is only bound to a PV with a label X
+
 ### Local Site Specific Storage
 - Use can configure the volumes in pods.spec.volumes and mount them in pod.spec.containers.volumeMounts
 - For testing purposes you can use non-portable site-specific storage using `hostpath` and `emptydir`
+
+
