@@ -51,4 +51,9 @@ Types of pipelines:
 - Multibranch pipeline
 
 
+## Declarative Pipeline
+- Strings in single quote won't unmarshall the environment variables directly but it will use the value in the execution
+- But if you ue a double quote it will directly unmarshall and embed the value in the output (Not good for secrets)
+- 
+
 
