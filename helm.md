@@ -32,3 +32,19 @@ See status of an app
  `helm uninstall <name>`
  
  
+ ## Kustomize
+ - This can be used to deploy multiple yaml files together. 
+ - You put all the yaml files along with the kustomization.yaml file inside a folder and:
+ `kubectl apply -k <Path to the folder>` <br>
+ 
+ <b> Sample kustomization.yaml: </b><br> 
+ 
+ ```yaml
+     resources:
+      - deployment.yaml
+      - service.yaml
+    namePrefix: test-
+    commonLabels:
+      environment: testing
+ ```
+ 
