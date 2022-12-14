@@ -22,3 +22,5 @@ Create a service <br>
 
 Edit a Service <br>
 `kubectl edit svc <Service_Name>`
+
+- KubeDNS allows you to access the services from withing the Cluster network by the service name. 
