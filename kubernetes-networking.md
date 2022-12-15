@@ -24,3 +24,22 @@ Edit a Service <br>
 `kubectl edit svc <Service_Name>`
 
 - KubeDNS allows you to access the services from withing the Cluster network by the service name. 
+
+
+## Ingress
+
+- Used to connect extrernal users with the internal Kubernetes cluster
+- Users go through a DNS resolver that resolves to the Ingress Controller's IP address
+- The Ingress Controller is essentially a load balancer
+- Uses selector to connect to the right service 
+- Routing rules
+- Supports HTTPS/HTTP
+- Ingress has two things:
+
+1. Ingress Controller: This is an API Resource
+- Many Ingress controllers exist:
+    1. nginx
+    2. traefik
+    3. haproxy ...
+2. Load Balancer: This is created by the community
+
