@@ -71,3 +71,16 @@ Rule format <br>
 `kubectl create ingress single|multihost --rule=<rule1> [--rule=<rule2>]`
 
 - Ingress Class: Each Ingress resource has a class since Kubernetes 1.22 and this class is used to specify a cluster default for the ingress controller
+
+
+## Network policies
+- By default there are no restrictions to network traffic in K8
+- Pods can communicate even if they are in different namespaces
+- Needs the network plugin
+- Pod or namespace based policies
+- Allows you to configure what traffic is allowed to and from the pods or res using selectors or IPs
+1. Pod Selector
+2. Namespace Selector
+3. IP Block
+- Allows access only if they math
+- Policies don't conflict, they add up
