@@ -43,3 +43,31 @@ Edit a Service <br>
     3. haproxy ...
 2. Load Balancer: This is created by the community
 
+
+Create an ingress resource <br>
+`kubectl create ingress <ingress_name> --rule="<path>=<service>:<port>"`
+
+### Ingress Rules
+Rule format <br>
+`<path>=<service>:<port>`
+
+1. Optional Host
+2. A list of paths
+3. The backend that consists of either a service or resource
+        1. Kubernetes Services
+        2. Resources: Cloud based object storage
+
+- A Default backend can be configured to just handle traffic and not deal with any specific backend
+
+### Ingress path Types
+1. Exact: There must be exact match of the path for it to be accepted (Eg. If set to /foo, /foo/ or /foo/bar won't be accepted)
+2. Prefix: The path should start with
+
+### Ingress Types
+1. Backed by single service
+2. Backed by two or more services with the same host
+3. Backed by two or more services with multiple hosts
+
+`kubectl create ingress single|multihost --rule=<rule1> [--rule=<rule2>]`
+
+- Ingress Class: Each Ingress resource has a class since Kubernetes 1.22 and this class is used to specify a cluster default for the ingress controller
