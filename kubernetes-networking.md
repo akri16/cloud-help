@@ -84,3 +84,6 @@ Rule format <br>
 3. IP Block
 - Allows access only if they math
 - Policies don't conflict, they add up
+
+
+- You can add DNS mapping on your linux system by editing /etc/hosts
