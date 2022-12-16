@@ -10,13 +10,32 @@
 - Remote terminals (When using a remote connection via shh): pts - Pseudo Terminal Slave - It is showed along with the IP address that is logged in
 
 - Find out who is logged in: `who` 
-![image](https://user-images.githubusercontent.com/54491362/207893450-050a916e-6ed3-46e9-96e6-c7060bd1710a.png)
-![image](https://user-images.githubusercontent.com/54491362/207893519-3c20bf47-a829-432b-96cc-63cf92caa7e0.png)
+- ![image](https://user-images.githubusercontent.com/54491362/207893450-050a916e-6ed3-46e9-96e6-c7060bd1710a.png)
+- ![image](https://user-images.githubusercontent.com/54491362/207893519-3c20bf47-a829-432b-96cc-63cf92caa7e0.png)
 
 - Documentation of a tool x: `man x` (pgup/pgdwn/up/dwn//search), `help`, `info`
   - man pages are divided into sections
 - Search for a tool to do y: `apropos y`
 - Get oneliner explanation for commands: `whatis x`
+
+
+## File System
+![image](https://user-images.githubusercontent.com/54491362/207903995-7d59e7eb-8fa8-45c9-b860-53a816e2a7c4.png)
+![image](https://user-images.githubusercontent.com/54491362/207904179-bc19007b-d4e6-40a4-ad38-7d8d40bbd6f0.png)
+![image](https://user-images.githubusercontent.com/54491362/207904477-45e68eca-223d-48a8-8d73-20806504eaf3.png)
+
+-Find out where a command is stored: `which <command>`
+- List files: `ls [-l] [-a] [-r]`
+- Files starting with . are hidden and shown when `ls -a`
+- Show the type of file: `file <file>`
+
+### Text Editors
+- Vim: Complex and powerful
+- Nano: Simple
+
+
+
+
 
 
 
