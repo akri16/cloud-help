@@ -85,3 +85,26 @@ Show the Daemons ets <br>
 - Autoscales according to trafic
 
 `kubectl -n workloaddb autoscale deployment <DEP_NAME> --cpu-percent=50  --min=1 --max=10`
+
+## Custom Resource Definitions (CRDs)
+- You can create custom resources in Kubernetes
+1. You can create CTRs
+    - No programming skills req
+    - Extends the existing API server
+2. Integrate your own API server
+    - Programming skills req
+
+## Operator
+- Add additional components to Kubernetes
+
+## StatefulSet
+- It is like a deployment but is stateful
+- Each pod in a statefulset has a state:
+    - Unique Identifier
+    - Unique Network Identifier
+    - Unique persistent volume for storing the state
+- Requires a headless service (ClusterIP: None) as the pods themselves have identities
+- Volumes can only be created with storage classes 
+- Deleting a statefulset may not delete the pods (reduce replicas to 0 and then delete)
+- Volumes persist across pod changes due to the unique identifier
+
