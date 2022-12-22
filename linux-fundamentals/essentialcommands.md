@@ -53,6 +53,14 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - Create files with a certain amount of space: `truncate -s <desired_size> <desired_file_name>`
 - To find a file `find <path_to_start_search> [-name | -type | -size] <argument>`
 
+## Input/output redirection
+- Consoles: Std. Error - 2; Std. Output - 1, Std. Input - 0
+- To redirect output to a file, `'some_command' 'console_no'> 'inputfilename'`
+- To redirect to a command, `command1 | command2 | command3` will chain them together
+- `>` overwrites existing content, `>>` appends to the existing content
+- You can input to a command from a file by using `<`
+- You can input to a command from a console by using the "here file" operator `<< EOF` To exit type 'EOF'
+
 
 
 
