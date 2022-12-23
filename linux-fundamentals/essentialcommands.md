@@ -49,12 +49,13 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 ![image](https://user-images.githubusercontent.com/54491362/209197271-b168ca16-bf10-4347-9ced-cf1bb2b19a42.png)
 - These numbers indicate the number of hard links to the inode of that file. 
 
-### Find files
+### Find files and text
 - Create files with a certain amount of space: `truncate -s <desired_size> <desired_file_name>`
 - To find a file `find <path_to_start_search> [-name | -type | -size] <argument>` (You can use globbing here `find . 'cat-*'`)
 - Find the difference betweent two text files: `diff [-y | -u] <file1>.txt <file2>.txt`
 - Find the difference between two non-text files: `cmp <file1> <file2>`
 - Information about a file: `stat <file>`
+- Find a text inside a file: `cat <file> | grep [-E] <pattern>` Use `-E` for using regex
 
 ### Input/output redirection
 - Consoles: Std. Error - 2; Std. Output - 1, Std. Input - 0
@@ -73,6 +74,13 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - Create tgz: `tar -czf <tgz_file> <globbed_files_to_archive> [<globbed_files_to_archive>]`
 - Create zip: `zip <target> <files>`
 - Unzip zip: `unzip <zip_file>`
+- `c`: create, `f`: file (normally to stdout), `z`: tgz
+
+### Reformat or edit text
+- Use `sed` for editing and `awk` for reformatting and rearranging
+![image](https://user-images.githubusercontent.com/54491362/209274379-933410c7-9357-47fb-ba82-903c984de649.png)
+- sed pattern: `s/<pattern>/<replace_content>[/g]` `g` is used for replacing all. Default is to replace the first occurrence on every line.
+- awk pattern: `$<n>`: nth word
 
 
 
