@@ -33,7 +33,7 @@
 - Vim: Complex and powerful
 - Nano: Simple
 
-## Links 
+### Links 
 
 1. Hard Links
 Data on disk is stored in different blocks. And these block ids are stored in a datastructure called inode. Files links to the inode using a hardlink. That's why even if you change the name of the file the file is still available at the location, you don't break the link. Note that copying the file creates a separate inode as the data is also copied.
@@ -49,17 +49,30 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 ![image](https://user-images.githubusercontent.com/54491362/209197271-b168ca16-bf10-4347-9ced-cf1bb2b19a42.png)
 - These numbers indicate the number of hard links to the inode of that file. 
 
-## Find files
+### Find files
 - Create files with a certain amount of space: `truncate -s <desired_size> <desired_file_name>`
-- To find a file `find <path_to_start_search> [-name | -type | -size] <argument>`
+- To find a file `find <path_to_start_search> [-name | -type | -size] <argument>` (You can use globbing here `find . 'cat-*'`)
+- Find the difference betweent two text files: `diff [-y | -u] <file1>.txt <file2>.txt`
+- Find the difference between two non-text files: `cmp <file1> <file2>`
+- Information about a file: `stat <file>`
 
-## Input/output redirection
+### Input/output redirection
 - Consoles: Std. Error - 2; Std. Output - 1, Std. Input - 0
 - To redirect output to a file, `'some_command' 'console_no'> 'inputfilename'`
 - To redirect to a command, `command1 | command2 | command3` will chain them together
 - `>` overwrites existing content, `>>` appends to the existing content
 - You can input to a command from a file by using `<`
 - You can input to a command from a console by using the "here file" operator `<< EOF` To exit type 'EOF'
+
+### Compressing and decompressing files
+- Archiving: Converting multiple files to a single file for portability -> .tar
+- Compressing: Reducing size by encoding info: Lossy and Lossless (default)
+- Two kinds of compressed format: .tgz and .zip
+- Create Archive: `tar -cf <tar_file>.tar <globbed_files_to_archive>`
+- Extract archive or compressed tgz: `tar -xf <tar_file> [-d <target_dir_name>]`
+- Create tgz: `tar -czf <tgz_file> <globbed_files_to_archive> [<globbed_files_to_archive>]`
+- Create zip: `zip <target> <files>`
+- Unzip zip: `unzip <zip_file>`
 
 
 
