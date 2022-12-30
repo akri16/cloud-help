@@ -82,6 +82,30 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - sed pattern: `s/<pattern>/<replace_content>[/g]` `g` is used for replacing all. Default is to replace the first occurrence on every line.
 - awk pattern: `$<n>`: nth word
 
+## File Permissions
+- Format of ls -l: `<type><user_perm><group_perm><other_perm> <no_of_hard_links> <user_name>  <group_name>`
+- perm: `rwx` (Read Write execute)
+- Eg. \_rw_r_xr__ :
+    - It is a file
+    - Owner can Read and Write
+    - Group can Read and Execute
+    - Others can only Read
+ 
+- ![image](https://user-images.githubusercontent.com/54491362/210047493-335be08c-9a86-4328-999d-c3b6066e3c0b.png)
+
+- Permission in octal notation
+- ![image](https://user-images.githubusercontent.com/54491362/210047578-bf738248-d783-42e0-8014-2580c4deba93.png)
+
+- Using symbolic notation, you can set(=), add(+) or remove(-) permissions for user(u), group(g), other(o)
+    - Set: =
+    - Add: +
+    - Remove: -
+
+- Change the permission of a file: `chmod <perm in any notation> <file>`
+    - Eg. `chmod 700 file.txt`
+    - Eg. `chmod ugo=rwx file.txt`
+ 
+
 
 
 
