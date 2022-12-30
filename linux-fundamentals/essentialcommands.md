@@ -106,9 +106,27 @@ Here the link is pointing to the file name rather then the inode. Because of thi
     - Eg. `chmod ugo=rwx file.txt`
  
 
+## Root User
+- Highly Privilleged user without any limit
+- To execute a command as the root user from a normal user account user `sudo <command>`
+- To create a terminal that executes every commaand as the root: `sudo -s` or `su`
+- The list of users that can use `sudo` are listed in the `/etc/sudoers` file. To edit the `sudoers` file, use 
 
+### Package Installation
+- `apt` is the package manager used on Ubuntu. Do `sudo apt install <pkg>`
+- Fetch updates for packages: `sudo apt update`
+- Install package updates: `sudo apt upgrade`
 
+### Remote commandline access
+- You can access your server remotely over the Secure Shell protocol or ssh. 
+- For this an SSH server must already be running on the server on port 22 by default. To install it run `sudo apt install openssh-server``
+- After this you can use `ssh <user>@<ip>` from another machine to connect to this
 
+### Transfer files 
+1. SFTP: Secure File Transfer Protocol: For multiple tasks -> Gives a dedicated prompt
+    - `sftp user@host` -> `get` / `put` / `cd` / `ls` / `help`
+2. SCP: Secure Copy - for one-off copying (like `cp`)
+    - `scp <from> <to>` Eg. `scp root@10.2.3.5:~/file.txt .` copies the file from the remote systems home folder to the current folder of this system  
 
 
 
