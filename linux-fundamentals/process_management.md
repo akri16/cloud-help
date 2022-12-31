@@ -51,6 +51,8 @@
 - You can use `systemctl status <unit>` to view the status of a unit
 - Use `systemctl cat <unit>` lists the content of the unit file
 - Using `systemctl list-units` will list the running units
-- Use `systemctl list-unit-files` to get a list of unit files, running or not
+- Use `systemctl list-unit-files [-t service]` to get a list of unit files, running or not
+- You can `start` or `stop` or `restart` a service with systemctl, but these changes won't persist
+- To persist changes you can, `mask`: Cannot be manually started or automatically or `disable`: Cannot be automatically started but manually yes
 
 
