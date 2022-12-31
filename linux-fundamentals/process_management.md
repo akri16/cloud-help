@@ -38,3 +38,19 @@
 - Bring a running process to the foreground: `fg $<job_id>`
 - Bring a running process to the background: `bg $<job_id>`
 
+### System Services
+- Called a `Daemon`, these are services that run in the background waiting for a request. These proceses are started in the background by the system, when it boots up
+- The kernel starts a super service that manages all the other system services: 
+      - Traditionally, this super service was `init`. This became slow as it started synchronously and can only used for boot up tasks. 
+      - Modern systems use `systemd` that is a suite of services that handle, manage and asynchronously start system services. It includes the init system
+      - It aims to unify bootup in different distributions
+      - It not only manages services, but also, networks, storage etc. and replaces a lot of other daemons
+
+### Systemd
+- Systemd has different units that it manages, These are managed using their unit files
+- You can use `systemctl status <unit>` to view the status of a unit
+- Use `systemctl cat <unit>` lists the content of the unit file
+- Using `systemctl list-units` will list the running units
+- Use `systemctl list-unit-files` to get a list of unit files, running or not
+
+
