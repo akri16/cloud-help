@@ -24,3 +24,4 @@
  - View password properties of a user: `passwd -S <username>`
  - `man 5 shadow`
  - Linux Pluggable Authentication Modules (PAM) is a suite of libraries that allows a Linux system administrator to configure methods to authenticate users
+ - use `loginctl` for session management
