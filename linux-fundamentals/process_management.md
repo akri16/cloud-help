@@ -55,4 +55,28 @@
 - You can `start` or `stop` or `restart` a service with systemctl, but these changes won't persist
 - To persist changes you can, `mask`: Cannot be manually started or automatically or `disable`: Cannot be automatically started but manually yes
 
+## Job Scheduling
+### One-time jobs with `at`
+- `at teatime`
+- `atq`: List jobs
+- Batch jobs: Run only when the system's load avg drops below 0.8
+- Bath jobs using `batch`
+
+### Cron Jobs: reccuring
+- `crontab` is the command used to submit jobs to the cron service
+- user and system-wide
+- ![image](https://user-images.githubusercontent.com/54491362/210163774-01af467a-e72b-4c63-9ccc-97d26170f0fb.png)
+- `man 5 crontab` for the crontab syntax
+- https://crontab-generator.org/
+![image](https://user-images.githubusercontent.com/54491362/210163962-5ce4a414-5fe1-4ba7-bc0c-be3f80b9c121.png)
+- System wide cron files are stored in `/etc/cron.d/<file>`
+- You can allow or deny access to cron and at using `/etc/at.allow` or `/etc/cron.allow` or `/etc/at.deny` or `/etc/cron.deny`
+- Allow overwrites deny. By default there is an empty deny file and no allow file. An empty allow file won't allow anyone and the lack of a deny file will deny everyone.
+- You can also use `access.conf` to control access of users to a command. Refer to `man access.conf`
+
+### Systemd timers
+- Realtime timers: Calendar events (date and time value)
+- Monotonic timer: After a timespan relative to a starting point. Eg. 5 min after boot
+- Jobs can be configured to run wrt an event or in their own environment when using systemd timers
+- List timers: `systemctl list-timers`
 
