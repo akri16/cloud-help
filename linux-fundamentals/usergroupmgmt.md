@@ -1,0 +1,26 @@
+## Users and Groups
+- Users can be normal users or system users (id < 1000): These are like service accounts
+- When a user creates a file, the user automatically become the owner of the file and a private grouo with the same name as the user with only that user in it is assigned to the file
+- `id` will show identification info of the current user
+- Create a user: `sudo useradd <username> [-m]`: -m option also creates a home directory in Ubuntu. In other distros it i created by default
+- Remove a user `sudo userdel <username>`
+- Create a group: `sudo groupadd <groupname>`
+- Add a user to a group: `sudo usermod -aG <groupname> <username>`
+- Users and their properties are stored in /etc/passwd. Common properties:
+      - UID: User id
+      - GID: the id of the primary group
+      - GECOS
+      - Home directory
+      - Shell: the default shell
+ - Use `getent passwd <username>` to get the details of the current user
+ - Passwords are stored in `/etc/shadow`
+ - Use `vipw` to edit /etc/shadow and /etc/passwd directly
+ - Groups are stored in `/etc/group`
+ - use `vigr` to edit /etc/group
+ - `/etc/login.defs` contains the default configurations for new users
+ - `/etc/skell` contains the defaulr content to be copied over to new users home directory
+ - Users can change password using `passwd`
+ - You can change the password and properties of a user using `chage <Username>`
+ - View password properties of a user: `passwd -S <username>`
+ - `man 5 shadow`
+ - Linux Pluggable Authentication Modules (PAM) is a suite of libraries that allows a Linux system administrator to configure methods to authenticate users
