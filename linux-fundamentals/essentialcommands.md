@@ -104,8 +104,12 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - Change the permission of a file: `chmod <perm in any notation> <file>`
     - Eg. `chmod 700 file.txt`
     - Eg. `chmod ugo=rwx file.txt`
- 
 
+- For directories:
+    - Read: ls
+    - Write: Add/Delete Files
+    - Execute cd
+ 
 ## Root User
 - Highly Privilleged user without any limit
 - To execute a command as the root user from a normal user account user `sudo <command>`
