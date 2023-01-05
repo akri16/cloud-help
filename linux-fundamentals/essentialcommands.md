@@ -83,6 +83,7 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - awk pattern: `$<n>`: nth word
 
 - Use `sort` and `uniq` to sort the output and get unique values from it respectively
+- Use `sort -n` for numeric sort. Otherwise normal string sort is done
 - Use `cut -d <delimiter> -f <column_no> <file>` to find a column from a delimitered file like csv
 
 ## File Permissions
