@@ -146,3 +146,6 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 ![image](https://user-images.githubusercontent.com/54491362/210697842-90e817f3-3a43-4204-82da-d09065464107.png)
 
 The devices are stored in `/dev` folder
+
+- You can `mount <device> <directory>` to mount a filesystem and `umount <directory>` to unmount a filesystem
+- Use `mkfs.<filesystem>` to create a filesystem
