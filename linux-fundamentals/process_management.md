@@ -55,6 +55,11 @@
 - You can `start` or `stop` or `restart` a service with systemctl, but these changes won't persist
 - To persist changes you can, `mask`: Cannot be manually started or automatically or `disable`: Cannot be automatically started but manually yes
 
+### Init System
+- WSL doesn't have systemd by default and to start and stop services, you can use:
+- `service start <name>` and `service stop <name>`
+- Use `service status <name>` to check the status of a service
+
 ## Job Scheduling
 ### One-time jobs with `at`
 - `at teatime`
