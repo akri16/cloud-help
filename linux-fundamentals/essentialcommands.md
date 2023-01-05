@@ -132,6 +132,11 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 2. SCP: Secure Copy - for one-off copying (like `cp`)
     - `scp <from> <to>` Eg. `scp root@10.2.3.5:~/file.txt .` copies the file from the remote systems home folder to the current folder of this system  
 
-
+## Mounting Drives
+- In Linux the drives are mounted on folders 
+- After the mounting any files added to the folders is stored in the drive
+- Use `df [-h]` to view the mounts with space free, file system type and a lot of other things
+- Use `lsblk` to view the mounts
+- Use `mount` and `findmnt` for viewing all the mounts including administrative mounts with the paths
 
 
