@@ -85,3 +85,10 @@
 - Jobs can be configured to run wrt an event or in their own environment when using systemd timers
 - List timers: `systemctl list-timers`
 
+
+## Date Time in Linux
+- Linux has OS time and Hardware time. These have to be synchronized with each other for normal functioning. 
+- There shouldn't be a difference of more than 1000s.
+- You can see and format the datetime with `date [+%d-%m-%Y]` command
+- You can use `sudo hwclock` to view the hwtime and use `sudo hwclock --systohc`
+- Use `timedatectl` to manage time
