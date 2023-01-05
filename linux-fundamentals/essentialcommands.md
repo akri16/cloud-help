@@ -82,6 +82,9 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - sed pattern: `s/<pattern>/<replace_content>[/g]` `g` is used for replacing all. Default is to replace the first occurrence on every line.
 - awk pattern: `$<n>`: nth word
 
+- Use `sort` and `uniq` to sort the output and get unique values from it respectively
+- Use `cut -d <delimiter> -f <column_no> <file>` to find a column from a delimitered file like csv
+
 ## File Permissions
 - Format of ls -l: `<type><user_perm><group_perm><other_perm> <no_of_hard_links> <user_name>  <group_name>`
 - perm: `rwx` (Read Write execute)
@@ -139,4 +142,6 @@ Here the link is pointing to the file name rather then the inode. Because of thi
 - Use `lsblk` to view the mounts
 - Use `mount` and `findmnt` for viewing all the mounts including administrative mounts with the paths
 
+![image](https://user-images.githubusercontent.com/54491362/210697842-90e817f3-3a43-4204-82da-d09065464107.png)
 
+The devices are stored in `/dev` folder
