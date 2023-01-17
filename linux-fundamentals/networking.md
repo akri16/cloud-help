@@ -11,3 +11,11 @@
 - Use `ping` to check a host
 - Use `ip route show` to see the router config
 - Use `ip a` for seeing the ip configurations
+
+
+## Beej's guide to networking
+- Everything in linux is a file
+- There are basically 2 types of sockets:
+      - Stream Socket
+      - Datagram Socket
+
