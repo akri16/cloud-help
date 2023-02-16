@@ -11,3 +11,5 @@
 - Don't write a lot
 - Start with what the reader needs
 - Don't try to cover everything
+
+- Product Requirements Docs: Functional and Non Fuctional Requirements
