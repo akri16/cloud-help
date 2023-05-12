@@ -1,0 +1,12 @@
+- Python Testing framework
+- Use parametrized tests for passing parameters
+- Use the format `test_<what you're testing>`
+- Use fixtures to create objects or deps or change the world for tests and pass in them as parameters
+- fixures:
+   - autouse
+   - scope
+   - rename
+   - classes
+   - plugins
+   
+- 
