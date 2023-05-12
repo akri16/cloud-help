@@ -9,4 +9,5 @@
    - classes
    - plugins
    
-- 
+- pytest will run all files of the form test_*.py or *_test.py in the current directory and its subdirectories
+- It finds both test_ prefixed functions and Test prefixed classes
